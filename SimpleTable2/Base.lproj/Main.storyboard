@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iNl-Kz-QjM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="Vdg-rq-lBc">
+            <objects>
+                <tableViewController id="iNl-Kz-QjM" customClass="TableViewController" customModule="SimpleTable2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MC7-QC-zsH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIdentifier" rowHeight="80" id="NlT-he-b2x" customClass="TableViewCell" customModule="SimpleTable2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NlT-he-b2x" id="hZt-gh-ODN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRv-26-xy3">
+                                            <rect key="frame" x="143" y="12" width="124" height="57"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXZ-Qi-z2u">
+                                            <rect key="frame" x="20" y="29" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oXZ-Qi-z2u" firstAttribute="top" secondItem="hZt-gh-ODN" secondAttribute="topMargin" constant="18" id="Bvl-JU-w5m"/>
+                                        <constraint firstItem="jRv-26-xy3" firstAttribute="top" secondItem="hZt-gh-ODN" secondAttribute="topMargin" constant="1" id="EpD-0w-WeI"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="oXZ-Qi-z2u" secondAttribute="bottom" constant="19" id="GuC-tO-NKh"/>
+                                        <constraint firstItem="oXZ-Qi-z2u" firstAttribute="leading" secondItem="hZt-gh-ODN" secondAttribute="leadingMargin" id="jGJ-iD-DSV"/>
+                                        <constraint firstItem="jRv-26-xy3" firstAttribute="leading" secondItem="oXZ-Qi-z2u" secondAttribute="trailing" constant="20" id="t4F-Uk-tl3"/>
+                                        <constraint firstItem="jRv-26-xy3" firstAttribute="bottom" secondItem="hZt-gh-ODN" secondAttribute="bottomMargin" id="xig-ue-YXm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="icon" destination="jRv-26-xy3" id="aOv-3u-YH9"/>
+                                    <outlet property="label" destination="oXZ-Qi-z2u" id="2eo-b5-jRj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iNl-Kz-QjM" id="bMO-G7-mvO"/>
+                            <outlet property="delegate" destination="iNl-Kz-QjM" id="9uN-2C-xaI"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DlF-WF-Vhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114.49275362318842" y="-62.276785714285708"/>
+        </scene>
+    </scenes>
+</document>
