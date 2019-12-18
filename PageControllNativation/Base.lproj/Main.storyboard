@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PageControllNativation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WZ-Vo-bu8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-7z-WFR">
+                                <rect key="frame" x="57" y="819" width="300" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="DHz-qD-12R"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="viewChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="F5o-Jn-VwY"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8WZ-Vo-bu8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1Ja-XX-tx7"/>
+                            <constraint firstItem="8WZ-Vo-bu8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LN0-du-BTd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7d3-7z-WFR" secondAttribute="bottom" constant="6" id="O6K-z3-Ex7"/>
+                            <constraint firstItem="7d3-7z-WFR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TY9-W1-OzE"/>
+                            <constraint firstItem="8WZ-Vo-bu8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tba-5a-UEe"/>
+                            <constraint firstItem="8WZ-Vo-bu8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Zo6-Gs-JPR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="7d3-7z-WFR" id="CkS-Nf-oMU"/>
+                        <outlet property="scrollview" destination="8WZ-Vo-bu8" id="nVr-yh-kP7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+</document>
